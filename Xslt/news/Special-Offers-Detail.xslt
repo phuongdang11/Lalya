@@ -15,7 +15,7 @@
 				</div>
 				<div class="item-1"></div>
 				<div class="row">
-					<div class="col w-ful zoom-inl  lg:w-1/2">
+					<div class="col w-full zoom-inl  lg:w-1/2">
 						<div class="image-item">
 							<img src="./img/specialoffers/img-item1.png" alt="">
 								<xsl:attribute name="src">

@@ -110,6 +110,8 @@
                 background-color: $green-3
                 color: $white
                 transition: 0.3s all
+            @media screen and ( max-width: 576px )
+                display: flex
         .active
             a
                 background-color: $green-3
@@ -118,7 +120,7 @@
         margin-top: 40px
         .row
             padding-bottom: 60px
-            &:nth-child(even)
+            &:nth-child(odd)
                 flex-direction: row-reverse
     .btn-view-more
         padding-left: 0

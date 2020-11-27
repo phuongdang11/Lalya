@@ -113,6 +113,26 @@
 
 	<xsl:template match="News">
 		<div class="row">
+			<div class="col w-full sm:w-1/2 lg:w-8/12">
+				<div class="image-content">
+					<a href="" alt="">
+						<xsl:attribute name="title">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="href">
+							<xsl:value-of select="Url"></xsl:value-of>
+						</xsl:attribute>
+						<img src="./img/meeting/item-2.png" alt="">
+							<xsl:attribute name="title">
+								<xsl:value-of select="Title"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="src">
+								<xsl:value-of select="ImageUrl"></xsl:value-of>
+							</xsl:attribute>
+						</img>
+					</a>
+				</div> 
+			</div>
 			<div class="col w-full sm:w-1/2 lg:w-4/12">
 				<div class="text-content">
 					<div class="tittle">
@@ -134,26 +154,6 @@
 						</a>
 					</div> 
 				</div>
-			</div>
-			<div class="col w-full sm:w-1/2 lg:w-8/12">
-				<div class="image-content">
-					<a href="" alt="">
-						<xsl:attribute name="title">
-							<xsl:value-of select="Title"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:attribute name="href">
-							<xsl:value-of select="Url"></xsl:value-of>
-						</xsl:attribute>
-						<img src="./img/meeting/item-2.png" alt="">
-							<xsl:attribute name="title">
-								<xsl:value-of select="Title"></xsl:value-of>
-							</xsl:attribute>
-							<xsl:attribute name="src">
-								<xsl:value-of select="ImageUrl"></xsl:value-of>
-							</xsl:attribute>
-						</img>
-					</a>
-				</div> 
 			</div>
 		</div>
 	</xsl:template>
