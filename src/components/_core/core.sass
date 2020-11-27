@@ -1,0 +1,155 @@
+$primary: #ec1f27
+$blue: #0975d0
+$main: #333333
+$green-1: #003616
+$green-2: #145730
+$green-3: #005f27
+$green-4: #335e45
+$grey-1: #ebebeb
+$grey-2: #c4abab
+$grey-3: #666666
+$grey-4: #f5f5f5
+$black: #000000
+$white: #ffffff
+
+		
+.tab-item
+	@apply hidden
+	&.active
+		@apply block
+
+
+.custom-select
+	overflow: hidden
+	position: relative
+	&:before
+		content: '\e874'
+		font-family: 'Linearicons-Free'
+		display: block
+		position: absolute
+		right: 15px
+		top: 50%
+		color: #333333
+		transform: translateY(-50%)
+		z-index: 1
+		pointer-events: none
+		font-size: 18px
+	select
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+		-webkit-appearance: none
+		-moz-appearance: none
+		font-size: 14px
+		&::-ms-expand 
+			display: none
+.table-responsive
+	@media screen and ( max-width:768px)
+		overflow-x: auto
+	table
+		@apply w-full
+		@media screen and ( max-width:768px)
+			white-space: nowrap
+		thead
+			tr
+				th
+					@apply bg-primary text-white text-16 font-bold text-left  py-4  px-6
+					@media screen and ( min-width:1024px)
+						&:first-child
+							@apply pl-12
+		tbody
+			tr
+				&:nth-child(even)
+					background: #f5f5f5
+				td
+					@apply py-4 px-6
+					&:first-child
+						width: 25%
+					@media screen and ( min-width:1024px)
+						@apply pl-12
+					&:last-child
+						width: 25%
+						@apply  text-right pr-12
+						.btn-view-more
+							span
+								color: #af9a56
+.read-more-wrapper
+	@apply pt-8
+	.content-text
+		.row
+			display: flex
+		p
+			display: none
+			@apply mb-2
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3)
+				@apply block
+				
+		.btn-view-more
+			@apply mt-4
+
+			.text-2
+				@apply hidden
+			&:hover
+				em
+					transform: translateX(0)
+	
+		&.active
+			p
+				@apply block
+		
+			.btn-view-more
+				span
+					&:first-child
+						display: none
+					&:last-child
+						display: block
+				.text-1
+					@apply hidden
+				.text-2
+					@apply block
+				em
+					&:after
+						transition: .3s all ease-in-out
+						opacity: 0
+.scollbar-wrap
+	height: 300px
+	padding-right: 15px
+	overflow-y: auto
+	scrollbar-width: thin
+	scrollbar-color: #99c8ac $green-3
+	@apply leading-relaxed text-left
+	&::-webkit-scrollbar
+		background: $green-3
+		width: 3px
+	&::-webkit-scrollbar-track
+		-webkit-box-shadow: inset 0 0 6px $green-3
+		background-color: $green-3
+	&::-webkit-scrollbar-thumb
+		background-color: #99c8ac
+.qradio
+	input
+		background-repeat: no-repeat
+		background-position: center
+		appearance: none
+		@apply block
+		width: 20px
+		height: 20px
+		background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black' width='20px' height='20px'><path d='M0 0h24v24H0z' fill='none'/><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'/></svg>")
+		&:checked
+			background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff0000' width='20px' height='20px'><path d='M0 0h24v24H0z' fill='none'/><path d='M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'/></svg>")
+.qcheckbox
+	@apply flex
+	label
+		@apply inline-block pl-2
+	input
+		background-repeat: no-repeat
+		background-position: center
+		appearance: none
+		@apply block
+		width: 20px
+		height: 20px
+		background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ec1f27' width='18px' height='18px'><path d='M0 0h24v24H0z' fill='none'/><path d='M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z'/></svg>")
+		&:checked
+			background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ec1f27' width='18px' height='18px'><path d='M0 0h24v24H0z' fill='none'/><path d='M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/></svg>")

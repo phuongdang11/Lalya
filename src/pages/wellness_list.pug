@@ -1,0 +1,10 @@
+extends _layout.pug
+
+block var
+    - var title = 'Wellness List'
+    - var bodyClass = 'homepage'
+
+block main
+    include ../components/top-banner/index.pug
+    include ../components/Admin_UI/breadcrumb/index.pug
+    include ../components/wellness/list/index.pug

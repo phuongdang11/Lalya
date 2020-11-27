@@ -1,0 +1,160 @@
+.accomodation-detail
+	@apply pt-16 pb-8 
+	background: url('../img/icon/leaf.png'), #f5f5f5f5
+	background-repeat: no-repeat
+	background-size: 200px 200px
+	background-position: bottom right
+	@screen lg
+		@apply pb-16
+	.chart-wrapper
+		@apply flex items-center justify-center mt-8
+		.item
+			@apply text-center px-16
+			@media screen and ( max-width: 1024px)
+				@apply px-8
+			@media screen and ( max-width: 767px)
+				@apply px-4
+			@media screen and ( max-width: 400px)
+				@apply px-2
+			.counter
+				@apply text-green-3 text-24 font-bold mb-3
+			span
+				@apply text-13 text-grey-3 block 
+	.caption
+		@screen xl
+			padding: 0 12%
+	.btn-center
+		@apply mt-6
+		@screen lg
+			@apply mt-8
+		.btn
+			width: 220px
+			min-width: 220px
+			&:hover
+				em
+					@apply text-green-3
+			em
+				@apply text-white inline-block pr-2
+				font-size: 18px
+				height: 18px
+				line-height: 18px
+	.swiper-top-wrap
+		@apply relative mt-8
+		.image-wrap
+			+img-ratio(630/1230)
+	
+				
+	.swiper-bottom-wrap
+		@apply mt-5 pb-16
+		@media screen and ( max-width:  1024px)
+			@apply pb-4
+		.image-wrap
+			display: block
+			height: 135px
+			width: auto
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+	.nav-arrow-prev,.nav-arrow-next
+		&:hover
+			em
+				@apply text-green-2
+	.swiper-nav-wrap
+		@apply hidden
+		
+		@media screen and ( max-width: 1024px)
+			@apply flex items-center justify-center pb-4
+			.nav-arrow-prev,.nav-arrow-next
+				@apply px-4
+		@media screen and ( max-width: 576px)
+			@apply pb-4
+			
+.accomodation-information
+	.section-title
+		@media screen and ( max-width: 1024px)
+			@apply text-22
+			
+	.row
+		@apply m-0 p-0 bg-white
+		+boxshadow
+		&:nth-child(even)
+			@apply flex-row-reverse
+			
+		&:not(:last-child)
+			@apply mb-8
+			@screen lg
+				@apply mb-12
+			@screen xl
+				@apply  mb-16
+		.col
+			@apply m-0 p-0
+			@media screen and ( max-width: 767px)
+				&:first-child
+					order: 2
+				&:last-child
+					order: 1
+				
+	.image-wrap
+		a
+			+img-ratio(520/780)
+	.content
+		padding: 50px 10px 50px 50px
+		@media screen and ( max-width: 1024px)
+			padding: 30px 10px 30px 30px
+		@media screen and ( max-width: 767px)
+			@apply p-4 py-8
+			
+		.section-title
+			@apply pb-4
+			@screen lg
+				@apply pb-5
+		ul
+			list-style-type: disc
+			padding: 0 0 0 20px
+			li
+				@apply text-13 text-grey-3
+	.scollbar-wrap
+		@apply text-13 text-grey-3
+		*
+			@apply text-13 text-grey-3
+		@media screen and ( max-width: 1280px)
+			height: 210px
+		@media screen and ( max-width: 1024px)
+			height: 270px
+			
+		@media screen and ( max-width: 960px)
+			height: 150px
+		@media screen and ( max-width: 767px)
+			height: auto
+.accomodation-other
+	@apply bg-grey-4 
+	.image-wrap
+		a
+			+img-ratio(560/960)
+	.wrapper
+		@apply relative overflow-hidden
+		&:hover
+			.title
+				transform: translate(-100%,-50%)
+			.overlay
+				@apply opacity-100
+	.title
+		@apply px-4 py-4 absolute top-50 translate-y-50 left-0 text-13 text-white flex items-center transition
+		height: 60px
+		background: rgba($green-3,.9 )
+		@media screen and ( max-width: 1024px)
+			height: 50px
+			
+	.overlay
+		@apply absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center opacity-0 transition
+		background: rgba(#000000,.5 )
+	.caption
+		@apply px-4
+		@screen md
+			@apply px-8
+		@screen lg
+			padding: 0 24%
+	.btn-view-more
+		span
+			@apply text-12 text-white

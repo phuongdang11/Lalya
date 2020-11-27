@@ -1,0 +1,143 @@
+//Button variable
+.btn
+	@apply text-14 font-medium text-center cursor-pointer inline-flex items-center justify-center text-white uppercase
+	transition: .3s all ease-in-out
+	height: 40px
+	padding: 0 30px
+	border: 1px solid transparent
+	span
+		@apply text-14 transition text-center mb-0 
+		&::first-letter
+			text-transform: uppercase
+	em
+		@apply transition
+		font-size: 14px
+		height: 14px
+		line-height: 14px
+	&.btn-primary
+		min-width: 130px
+		@apply transition bg-green-3
+		border: 1px solid $green-2
+		span
+			@apply text-white uppercase  font-medium
+		
+		em
+			@apply   inline-block ml-2 text-main
+		&:hover
+			@apply bg-white
+			span,em
+				@apply text-green-2
+			@apply bg-white
+	&.btn-reservation
+		min-width: 130px
+		@apply transition 
+		background: #012a12
+		border: 1px solid #012a12
+		height: 45px
+		span
+			@apply text-14 text-white uppercase font-normal
+		em
+			@apply   inline-block ml-2 text-main
+		&:hover
+			@apply bg-white
+			span,em
+				@apply text-green-2
+			@apply bg-white
+	
+	&.btn-modal-close
+		z-index: 9
+		width: 40px
+		height: 40px
+		@apply flex items-center justify-center absolute top-0 right-0 bg-primary pointer-events-auto
+		&:focus
+			outline: none
+		span
+			@apply text-24 text-white
+	&.btn-view-more
+		span
+			@apply text-12 text-main underline uppercase font-medium transition
+		&:hover
+			span
+				@apply text-green-3
+//CSS icon
+.plus-icon
+	@apply flex items-center justify-center text-white relative bg-primary
+	width: 32px
+	height: 32px
+	border-radius: 50%
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		left: 50%
+		bottom: 14px
+		width: 18px
+		height: 2px
+		background: #ffffff
+		transform: translate(-50%,-50%)
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		left: 50%
+		bottom: 7px
+		width: 2px
+		height: 18px
+		background: #ffffff
+		transform: translateX(-50%)
+	&.plus-icon-blue
+		background: #ffffff
+		&:before,&::after
+			background: $blue
+		&:before
+			bottom: 14px
+			width: 14px
+			height: 2px
+		&:after
+			bottom: 9px
+			width: 2px
+			height: 14px
+
+//Swiper navigation
+.nav-arrow-prev,.nav-arrow-next
+	@apply absolute top-50 flex z-10 items-center justify-center transition
+	transform: translateY(-50%)
+	width: 45px
+	height: 45px
+	@media screen and ( max-width:1024px)
+		width: 30px
+		height: 30px
+		@apply static mx-4
+	&.swiper-button-disabled
+		@apply opacity-0 pointer-events-none
+	em
+		transition: .3s all ease-in-out
+		font-size: 30px
+		height: 30px
+		line-height: 30px
+		@apply text-grey-3
+		@media screen and ( max-width:1024px)
+			font-size: 24px
+			height: 24px
+			line-height: 24px
+.swiper-nav-wrap
+	@apply flex justify-center items-center mt-8
+.nav-arrow-next
+	right: -50px
+.nav-arrow-prev
+	left: -50px
+.btn-center
+	@apply flex items-center justify-center
+	a
+		&:not(:last-child)
+			@apply mr-2
+.btn-left
+	@apply flex items-center justify-start
+	a
+		&:not(:last-child)
+			@apply mr-2
+.btn-right
+	@apply flex items-center justify-end
+	a
+		&:not(:last-child)
+			@apply mr-2

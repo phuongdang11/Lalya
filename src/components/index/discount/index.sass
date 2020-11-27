@@ -1,0 +1,29 @@
+.home-discount
+	@apply pb-8
+	@screen lg
+		@apply pb-16
+.home-swiper-discount
+	@apply relative
+.figure-discount
+	@apply bg-white
+	+boxshadow
+	.image-wrap
+		a
+			+img-ratio(350/610)
+	.content
+		@apply p-6
+		@screen lg
+			@apply p-8
+	.caption
+		@apply mb-0
+		display: -webkit-box
+		-webkit-line-clamp: 2
+		-webkit-box-orient: vertical
+		overflow: hidden
+	.sub-title
+		@apply pb-4
+		a
+			display: -webkit-box
+			-webkit-line-clamp: 2
+			-webkit-box-orient: vertical
+			overflow: hidden

@@ -1,0 +1,103 @@
+section.accomodation-detail
+	.container
+		.section-title.text-center Accomodation
+		.caption.text-center Set over 3 levels. The lower floor contains a large bathroom with shower, separate bathtub, toilet, twin basins and wardrobes. The middle level is an open-air deck lounge space, with bar, sofas, dining space and plunge pool. The air conditioned upper level is the bedroom with full or filtered ocean views, mosquito net, entertainment system, television, en-suite toilet and balcony overlooking the forest.
+		.chart-wrapper
+			-for(i=0;i<3;i++)
+				.item
+					.counter 90
+					span square meters
+		.btn-center
+			a(href="#").btn.btn-primary
+				em.mdi.mdi-pencil
+				span Book now
+
+		.swiper-top-wrap
+			.hidden(class='lg:block')
+				.nav-arrow-prev
+					em.lnr.lnr-arrow-left
+				.nav-arrow-next
+					em.lnr.lnr-arrow-right
+			.swiper-container.gallery-top
+				.swiper-wrapper
+					.swiper-slide
+						.image-wrap
+							img(src="./img/room/2.png", alt="")
+					.swiper-slide
+						.image-wrap
+							img(src="./img/room/2.png", alt="")
+					.swiper-slide
+						.image-wrap
+							img(src="./img/room/2.png", alt="")
+					.swiper-slide
+						.image-wrap
+							img(src="./img/room/2.png", alt="")
+					.swiper-slide
+						.image-wrap
+							img(src="./img/room/2.png", alt="")
+		.swiper-bottom-wrap
+			.swiper-container.gallery-thumbs
+				.swiper-wrapper
+					.swiper-slide
+						.image-wrap
+							img(src="./img/room/2.png", alt="")
+					.swiper-slide
+						.image-wrap
+							img(src="./img/room/2.png", alt="")
+					.swiper-slide
+						.image-wrap
+							img(src="./img/room/2.png", alt="")
+					.swiper-slide
+						.image-wrap
+							img(src="./img/room/2.png", alt="")
+					.swiper-slide
+						.image-wrap
+							img(src="./img/room/2.png", alt="")
+		.swiper-nav-wrap
+			.nav-arrow-prev
+				em.lnr.lnr-arrow-left
+			.nav-arrow-next
+				em.lnr.lnr-arrow-right
+		.accomodation-information
+			-for(i=0;i<5;i++)
+				.row
+					.col.w-full(class='md:w-5/12')
+						.content
+							.section-title Room Features 
+							.scollbar-wrap
+								ul
+									li Air Conditioned Bed Rooms
+									li King Size Bed(s) with dawn & feather pads, duvets and pillows
+									li Jungle Net
+									li Five points bathroom settings
+									li Free WIFI
+									li In Room Safe box
+									li Private Plunge Pool
+									li Full entertainment system including multi room sound system
+									li Rechargeable torch light
+									li Hair Dryer
+									li Lounge and Living areas
+									li Hand Made Soaps, shampoo, conditioner, and jungle repellent
+					.col.w-full(class='md:w-7/12')     
+						.image-wrap
+							a(href="javascript:;")
+								img(src="./img/room/Layer1.png", alt="")
+
+		
+section.accomodation-other
+	.section-title.text-center Accomodation
+	.swiper-container
+		.swiper-wrapper
+			-for(i=0;i<5;i++)
+				.swiper-slide
+					.wrapper
+						.image-wrap.zoom-in
+							a
+								img(src="./img/room/image-1.png", alt="") 
+						.title 02 bedrooms beach front pool villas
+						.overlay
+							.sub-title.white Grand lagoon pool villas
+							.caption.text-white.text-center Grand Lagoon Pool Villas are identical semi attached villas with a central living area between them. Each villa has a large bedroom with an entertainment system, oversize bathroom, outdoor bathtub, garden shower, and a double day bed overlooking the lagoon.
+							.btn-center
+								a(href="#").btn.btn-view-more
+									span See more

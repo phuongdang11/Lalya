@@ -1,0 +1,51 @@
+section.pages-news_event_list 
+	.container 
+		.section-title.text-center 
+			h1 News - Event 
+		.row 
+			.col.w-full(class="md:w-1/2 sm:w-full")
+				.item.big
+					.img.zoom-in
+						a(href="")
+							img(src="./img/news_event/ne_1.png" alt="") 
+					.content 
+						.date 
+							p 01-06-2020 
+						.title 
+							a(href="") Experience world-class service at L'Alya Ninh Van Bay 
+						.caption
+							p Featuring luxurious villas with private pools, L ’L'Alya Ninh Van Bay offers a peaceful holiday amidst lush greenery overlooking Ninh Van Bay. It features an infinity pool, full of spa facilities and fine dining.
+			.col.w-full(class="md:w-1/2 sm:w-full")
+				.row 
+					-for(i=0;i<4;i++)
+						.col.w-full(class="md:w-1/2 sm:w-1/2")
+							.item.side
+								.img.opacity
+									a(href="")
+										img(src="./img/news_event/ne_1.png" alt="") 
+								.content 
+									.date 
+										p 01-06-2020 
+									.title 
+										a(href="") Experience world-class service at L'Alya Ninh Van Bay 
+			-for(i=0;i<3;i++)
+				.col.w-full(class="sm:w-1/2 md:w-1/3")
+					.item.normal
+						.img.opacity
+							a(href="")
+								img(src="./img/news_event/ne_1.png" alt="") 
+						.content 
+							.date 
+								p 01-06-2020 
+							.title 
+								a(href="") Lost In Paradise L'Alyana Ninh Van Bay is beautiful in Nha Trang! 
+		.pages
+			.modulepager
+				ul.pagination
+					li.active
+						a(href="#") 1
+					li
+						a(href="#") 2
+					li
+						a(href="#") 3
+

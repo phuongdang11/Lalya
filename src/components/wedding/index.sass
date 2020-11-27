@@ -1,0 +1,208 @@
+.wedding
+    padding-bottom: 0 !important
+    padding-top: 4rem
+    @apply bg-grey-4
+    .mt-60
+        margin-top: 60px
+    .brochure
+        width: 220px
+        height: 40px
+        background-color: $green-3
+        color: $white
+        // border: 1px solid $green-3
+        padding: 12px 0 0 55px
+        display: flex
+        font-weight: 500
+        &:hover
+            background-color: $white
+            color: $green-3
+            border: 1px solid $green-3
+            transition: .5s
+            font-weight: 500
+            a
+                color: $green-3
+                font-size: 0.875rem
+        a   
+            color: $white
+            text-transform: uppercase
+            font-size: 0.875rem
+            padding-left: 10px
+    .item1
+        width: 100%
+        min-height: 210px
+        over-flow: hidden
+        padding-top: 40px
+        padding-bottom: 20px
+        .row
+            margin-left: 0px
+            margin-right: 0px
+        .col
+            margin-bottom: 0
+            padding-left: 0px
+            padding-right: 0px
+    .image-item
+        width: 100%
+        display: block
+        min-height: 500px
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    .image-content
+        width: 100%
+        min-height: 120px
+        display: block
+        min-height: 120px
+        img
+            width: 100%
+            height: auto
+            object-fit: cover
+    .text-item
+        width: 100%
+        height: 100%
+        padding-top: 50px
+        padding-left: 40px
+        padding-right: 25px
+        background-color: $white  
+        .text
+            font-size: 0.8125rem
+            padding-right: 50px
+            padding-top: 2rem
+            padding-bottom: 1rem
+            line-height: 1.25rem          
+    .tittle-item
+        font-size: 1.25rem
+        color: $green-3
+        font-weight: 500
+    .text-content
+        padding-top: 30px
+        .tittle
+            font-weight: 600
+            font-size: 1.25rem
+        .text
+            font-size: 0.8125rem
+            padding-right: 50px
+            padding-top: 0.5rem
+            line-height: 1.25rem
+    .tab-links
+        padding-top: 60px
+        width: 100%
+        min-height: 70px
+        display: flex
+        justify-content: center
+        align-items: center
+        ul
+            display: flex
+        li  
+            white-space: nowrap
+            margin-left: r(50px)
+            min-height: 40px
+        a   
+            color: $green-3
+            padding-top: 10px
+            padding-bottom: 10px
+            padding-left: 80px
+            padding-right: 80px
+            border: 1px solid $green-3
+            background-color: $white
+            font-size: 0.8125rem
+            &:hover
+                background-color: $green-3
+                color: $white
+                transition: 0.3s all
+        .active
+            a
+                background-color: $green-3
+                color: $white
+    .content
+        margin-top: 40px
+        .row
+            padding-bottom: 60px
+            &:nth-child(even)
+                flex-direction: row-reverse
+    .btn-view-more
+        padding-left: 0
+    @media screen and (max-width: 1280px)
+        .text-item
+            .tittle-item
+                font-size: r(16px)
+            .text
+                font-size: r(11px)
+                padding-right: r(15px)
+        .image-item
+            min-height: 420px
+    @media screen and (max-width: 1024px)
+        .text-item
+            padding-right: 15px
+            .tittle-item
+                font-size: 1.25rem
+            .text
+                font-size: 0.8125rem
+                padding-right: r(15px)
+        .image-item
+            min-height: 320px
+        .text-content
+            padding-right: 0
+    @media screen and (max-width: 960px)
+        .text-item
+            padding-top: r(30px)
+            .tittle-item
+                font-size: r(15px)
+            .text
+                font-size: r(11px)
+                padding-top: 15px
+        // .text
+        //     padding-right: 0
+        .text-content
+            padding-top: 5px
+        .btn-view-more
+            padding-top: 0
+        .image-item
+            min-height: 230px
+    @media screen and (max-width: 768px)
+        .image-item
+            min-height: 260px
+        .text-item
+            padding-right: 15px
+            justify-content: center
+            align-content: center
+            .tittle-item
+                font-size: 1rem
+            .text
+                font-size: 0.75rem
+                padding-top: 0.5rem
+                padding-right: 5px
+        .text-content
+            padding-left: 0
+            .tittle
+                font-size: 1.125rem
+            .text
+                padding-top: 1rem
+                padding-bottom: 0
+        .tab-links
+            li
+                margin-left: r(20px)
+    @media screen and (max-width: 576px)
+        .text-item
+            padding-top: 2rem
+            padding-left: 15px
+        .tab-links
+            ul
+                display: flex
+                width: 100%
+                flex-direction: column
+            li
+                margin-left: 0
+                a 
+                    width: 100%
+        .content
+            .col
+                margin-bottom: 0 !important
+        .text-content
+            .text
+                padding-bottom: 0
+        .btn-view-more
+            padding-top: 0
+        .brochure
+            padding-left: 65px
+            padding-top: 15px

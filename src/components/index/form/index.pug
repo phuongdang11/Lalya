@@ -1,0 +1,25 @@
+section.home-reservation
+	.container
+		.title(data-aos="fade-down" data-aos-easing="ease-in" data-aos-delay="100" data-aos-duration="650" data-aos-offset="100") Reservation
+		.reservation-form(data-aos="fade-up" data-aos-easing="ease-in" data-aos-delay="100" data-aos-duration="650" data-aos-offset="100")
+			.wrap-form
+				.row
+					.col.w-full(class='sm:w-1/2 lg:w-3/12').form-group
+						label Check in date
+						input.form-control(type='date', placeholder='Ho va ten')
+					.col.w-full(class='sm:w-1/2 lg:w-3/12').form-group
+						label Check out date
+						input.form-control(type='date', placeholder='Ho va ten')
+					.col.w-full(class='sm:w-1/2 lg:w-3/12').form-group
+						label Guest
+						.custom-select
+							select(name="")
+								option 1
+								option 2
+								option 3
+					.col.w-full(class='sm:w-1/2 lg:w-3/12')
+						.frm-btnwrap
+							.frm-btn
+								input(type="submit" value ="Check availability")
+				
+					

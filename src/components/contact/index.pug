@@ -1,0 +1,51 @@
+section.contact
+    .container
+        .section-title.text-center Contact us
+        .item
+            .row
+                .col.w-full(class='sm:w-1/2 lg:w-4/12')
+                    .box-1
+                        h3.title L’Alya Ninh Vân Bay
+                        ol
+                            li
+                                em.lnr.lnr-map-marker
+                                span Tan Thanh Hamlet, Ninh Ich Commune,Ninh Hoa District, Khanh Hoa Province, Viet Nam
+                            li
+                                em.lnr.lnr-envelope
+                                span reservation.nvb@lalya.com
+                            li
+                                em.lnr.lnr-phone-handset
+                                span +84 258 3624 964 - 0905223966
+                            li
+                                em.lnr.lnr-phone
+                                span +84 258 3516 153
+                .col.w-full(class='sm:w-1/2 lg:w-8/12')
+                    .box-2
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1418.3128130775904!2d109.2765350372703!3d12.35665424880433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3170694ecce6486b%3A0xc6cecde5f883d8a1!2sNinh%20Van%20Bay!5e0!3m2!1sen!2s!4v1603423381312!5m2!1sen!2s" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+.form-contact
+    .container
+        .text-form.text-center  For more information on L’Alya Ninh Van Bay or to request that a member of our sales team contact you, please fill in the form below.
+        .wrap-form(name='myform' action='#' onsubmit='return validate()')
+            .row
+                .col.w-full(class='sm:w-1/2  lg:w-3/12').form-group
+                    label Fullname *
+                    input(type='text' name='name')
+                    span
+                .col.w-full(class='sm:w-1/2  lg:w-3/12').form-group
+                    label Phone *
+                    input(type='text'  name='name')
+                    span
+                .col.w-full(class='sm:w-1/2  lg:w-3/12').form-group
+                    label Email *
+                    input(type='text'  name='name')
+                    span
+                .col.w-full(class='sm:w-1/2  lg:w-3/12').form-group
+                    label Tittle *
+                    input(type='text'  name='name')
+                    span
+                .col.w-full.form-group
+                    label Please write your enquiry here*
+                    textarea(type='type' name='name' cols="30" rows="5").form-detail
+                    span
+            .frm-btn.btn-center
+                input(type='submit', value="Send")

@@ -1,0 +1,62 @@
+.global-breadcrumb
+	background: #ffffff
+	border-bottom: 1px solid #f5f5f5
+	.breadcrumb
+		height: 40px
+	@media screen and(max-width: 400px)
+		@apply hidden
+	ol
+		white-space: nowrap
+		padding: 0
+		list-style-type: none
+		@apply h-full py-3
+		li
+			display: inline-flex
+			font-size: 16px
+			line-height: 23px
+			padding-right: 15px
+			position: relative
+			@apply h-full
+			&.active
+				a,span
+					@apply text-green-3
+			&:not(:last-child)
+				&:after
+					content: '/'
+					display: block
+					position: absolute
+					pointer-events: none
+					right: 8px
+					bottom: 7pxpx
+					z-index: 9
+					height: 15px
+					width: 1px
+					transition: .3s all ease-in-out
+		
+			a,span
+				text-decoration: none
+				font-size: 13px
+				font-weight: 400
+				line-height: 20px
+				color: #666666
+				&.active
+					@apply text-green-3
+					span
+						@apply text-green-3
+	@media screen and(max-width: 1200px)
+		margin-bottom: 0
+	@media screen and(max-width: 768px)
+		margin-bottom: 0
+	@media screen and(max-width: 576px)
+		.breadcrumb
+			li
+				font-size: 12px
+				line-height: 20px
+				a
+					font-size: 12px
+					line-height: 20px
+					@apply font-light
+					span
+						font-size: 12px
+						line-height: 20px
+						@apply font-light

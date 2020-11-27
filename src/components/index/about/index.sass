@@ -1,0 +1,65 @@
+.home-about
+	@apply py-16
+	
+	.zone-description
+		@apply pb-6
+		@screen lg
+			@apply  pb-10
+			padding: 0 8.33%
+	.scollbar-wrap
+		@apply text-13 font-normal  leading-relaxed mb-4 text-grey-3 pr-0
+		*
+			@apply text-13 font-normal  leading-relaxed  text-grey-3
+	.btn-view-more
+		@apply p-0
+		span
+			@apply text-14
+	.top-row
+		@apply m-0 p-0 bg-white mb-8
+		+boxshadow
+		.col
+			@apply m-0 p-0
+		
+	
+		.content
+			@apply py-12 pr-5 pl-12 flex flex-col justify-start items-start
+			@media screen and ( max-width: 1024px)
+				@apply p-8
+			@media screen and ( max-width: 1024px)
+				@apply p-6
+				
+	.scollbar-wrap
+		height: 220px
+		@media screen and ( max-width: 1024px)
+			height: 80px
+			
+	.image-wrap
+		a
+			+img-ratio(510/810)
+				
+	.image-wrapper
+		@apply h-full
+		@media screen and ( max-width: 767px)
+			a
+				+img-ratio(510/600)
+		@screen md
+			a
+				display: block
+				height: 510px
+				width: auto
+				@media screen and ( min-width: 960px)
+					height: 350px
+				@media screen and ( min-width: 1024px)
+					height: 400px
+				
+
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+		// &.side
+		// 	a
+		// 		+center-image
+		// &.horizontal
+		// 	a
+		// 		+img-ratio(510/790)

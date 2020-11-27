@@ -1,0 +1,74 @@
+.weeding-detail
+    @apply bg-grey-4 py-16
+    .book-now
+        width: 220px
+        height: 40px
+        background-color: $green-3
+        color: $white
+        // border: 1px solid $green-3
+        padding: 12px 0 0 55px
+        display: flex
+        font-weight: 500
+        &:hover
+            background-color: $white
+            color: $green-3
+            border: 1px solid $green-3
+            transition: .5s
+            font-weight: 500
+            a
+                color: $green-3
+                font-size: 0.875rem
+        a   
+            color: $white
+            text-transform: uppercase
+            font-size: 0.875rem
+            padding-left: 10px
+    .item-1
+        width: 100%
+        min-height: 200px
+        .row
+            margin-top: 30px
+        .box-image
+            width: 100%
+            height: 100%
+            display: block
+            height: 100%
+            width: auto
+            img
+                width: 100%
+                height: 100%
+                object-fit: contain
+    .banner-detail
+        margin-top: 50px
+        width: 100%
+        height: 500px
+        .info-banner
+            width: 26.25rem
+            min-height: 500px
+            background-color: $white
+            opacity: 0.9
+            padding-top: 60px
+            padding-left: 30px
+            padding-right: 60px
+            .text
+                font-size: 1rem
+                color: $grey-3
+            .tittle
+                font-size: 1.875rem
+                padding-top: 3px
+                font-weight: 500
+                position: relative
+                color: $main
+                &::before
+                    content: ''
+                    width: 70px
+                    height: 2px
+                    background-color: $green-3
+                    bottom: -5px
+                    left: 5px
+                    position: absolute
+            .content
+                font-size: 0.8125rem
+                padding-top: 30px
+                line-height: 1.25rem
+                color: $grey-3

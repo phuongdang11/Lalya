@@ -1,0 +1,71 @@
+.home-reservation
+	@apply py-14 bg-white
+	.title
+		@apply text-18 text-main font-semibold mb-5
+html body .RadInput_Default .riTextBox, html body .RadInputMgr_Default
+	border: none !important
+	height: 40px !important
+	font-family: 'Montserrat' !important
+	font-size: .875rem !important
+	font-weight: 600 !important
+html body .RadInput_Default .riError, html body .RadInput_Error_Default
+	background-position:  97% -290px !important
+.frm-btn-reset
+	display: none !important
+.RadPicker_Default a.rcCalPopup:hover, .RadPicker_Default a.rcCalPopup:focus, .RadPicker_Default a.rcCalPopup:active
+	background-position: 0 0 !important
+.RadPicker_Default .rcCalPopup,.RadPicker_Default .rcTimePopup
+	background-image: url('../img/calendar.png') !important
+	&:hover
+		background-image: url('../img/calendar.png') !important
+.reservation-form
+	.wrap-form
+		@apply relative
+	.RadPicker 
+		width: 100% !important
+		border-bottom: 1px solid #999999 !important
+		input,select
+			border: none
+			border-bottom: 1px solid #999999
+			height: 40px
+	.fa-exclamation-triangle
+		left: 15px
+	.form-group
+		
+		label
+			@apply text-14 text-grey-3 mb-2
+			@screen sm
+				@apply  mb-0
+		input,select
+			border-bottom: 1px solid #999999
+			height: 40px
+			@apply text-14 font-semibold text-main p-0 w-full
+		select
+	.frm-btnwrap
+		@apply mt-0
+		@screen lg
+			@apply absolute top-0 right-0
+		@media screen and ( max-width:  1024px)
+			@apply absolute right-0
+			bottom: 1.5rem
+			width: calc( 50% - 15px )
+		@media screen and ( max-width: 576px)
+			@apply static mt-12 w-full
+		
+		label
+			display: none !important
+		.frm-btn
+			margin-right: 30px
+			@media screen and ( max-width: 1280px)
+				@apply mr-0
+				
+			input
+				@apply text-14 text-white uppercase font-medium bg-green-3
+				border: 1px solid $green-3
+				border-radius: 0
+				width: 220px
+				&:hover
+					@apply text-green-3 bg-white
+				@media screen and ( max-width:  1024px)
+					@apply w-full
+					

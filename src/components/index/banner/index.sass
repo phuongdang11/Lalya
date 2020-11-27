@@ -1,0 +1,54 @@
+.primary-banner
+	.swiper-container
+		@media screen and ( min-width: 1024.1px)
+			height: calc( 100vh - 90px )
+		@media screen and ( min-width: 767.8px)
+			height: calc( 100vh - 110px )
+	.swiper-slide
+		@apply relative
+	.wrapper
+		
+			a
+				@media screen and ( max-width: 767px)
+					@apply flex justify-center items-center
+					width: auto
+					img
+						width: 100%
+						height: 100%
+				@media screen and ( min-width: 767.8px)
+					display: block
+					height: calc( 100vh - 110px )
+					width: auto
+					img
+						width: 100%
+						height: 100%
+						object-fit: cover
+				@media screen and ( min-width: 1024.1px)
+					height: calc( 100vh - 90px )
+					
+	.content
+		@apply absolute left-50 translate-x-50 z-10 text-center w-full
+		bottom: 130px
+		@media screen and ( min-width: 1280px)
+			max-width: 1260px
+		@media screen and ( max-width: 1024px)
+			max-width: 900px
+		@media screen and ( max-width: 960px)
+			max-width: 740px
+			bottom: 50px
+		@media screen and ( max-width: 576px)
+			bottom: 15px
+		*
+			@apply text-white
+		.title
+			@apply text-24  font-thin mb-4 w-full
+			@media screen and ( max-width: 360px)
+				@apply text-20 px-2
+			@screen md
+				@apply text-28 
+			@screen lg
+				@apply  mb-5 text-36
+		.text
+			@apply text-16 font-medium uppercase
+			@screen lg
+				@apply text-20

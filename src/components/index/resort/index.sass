@@ -1,0 +1,64 @@
+.home-resort
+	.scollbar-wrap
+		height: auto
+	
+			
+	.zone-description
+		@apply p-0 mb-8
+		@screen lg
+			padding: 0 8.33%
+		@screen xl
+			padding: 0 16.66%
+			@apply mb-10
+	.section-title
+		@apply pb-6
+	.sub-title
+		a
+			@apply font-medium
+		@media screen and ( max-width: 767px)
+			@apply pb-4
+			
+	.btn-left
+		@apply pt-2
+		@media screen and ( max-width: 767px)
+			@apply pt-0
+			
+		.btn-view-more
+			@apply p-0
+	.content
+		@apply flex flex-col justify-start items-start pt-6
+		@screen lg
+			@apply pt-10
+		@screen xl
+			@apply pt-16
+		@media screen and ( max-width: 767px)
+			@apply items-center
+	.caption
+		@media screen and ( max-width: 767px)
+			@apply mb-0 text-center
+			
+	.row
+		@media screen and ( max-width: 767px)
+			margin: 0 -15px 30px -15px
+			.col
+				@apply pb-0 mb-0
+		&:not(:last-child)
+			@screen md
+				@apply mb-0
+			@screen lg
+				@apply mb-8
+			@screen xl
+				@apply mb-16
+		&:nth-child(even)
+			@apply flex-row-reverse
+		&:nth-child(odd)
+			.content
+				@apply pl-6
+				@screen xl
+					@apply pl-12
+				@media screen and ( max-width: 1024px)
+					@apply pl-0
+					
+	.image-wrap
+		a
+			+img-ratio(420/810)

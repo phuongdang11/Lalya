@@ -1,0 +1,84 @@
+.wellness_detail-3
+	@apply  bg-grey-4 pt-16 pb-20
+	@screen lg
+		@apply pt-16 pb-12
+	.wnd-3-wrapper
+		width: 100%
+		position: relative
+		.swiper-slide
+			&:hover
+				.btn-view-more
+					span
+						@apply text-green-3
+				.content
+					a
+						color: $green-3
+						text-decoration: underline
+					
+				img
+					transform: scale(1.1) rotate(2deg)
+			.img
+				overflow: hidden
+				a
+					+img-ratio(350/600)
+				img
+					transition: 0.3s all ease
+			.content
+				a
+					@apply text-main text-20 font-light pt-8 pb-2 transition block
+					@media screen and ( max-width: 1024px)
+						@apply pt-4 pb-0
+						
+			
+		.arrow-slide
+			@media screen and ( max-width: 769px )
+				display: flex
+				position: relative
+				align-items: center
+				justify-content: center
+				top: 30px
+				.swiper-button-next
+					margin-left: 10px
+				.swiper-button-next,.swiper-button-prev
+					position: static!important
+					background-color: white
+					width: 30px!important
+					height: 30px!important
+					border: thin solid $green-3
+					transition: 0.3s all ease
+					&:hover
+						background-color: $green-3
+						border: 0px
+						span
+							color: #fff
+					span
+						transform: 0.3s all ease
+						font-size: 1.2rem!important
+			@media screen and ( max-width: 567px )
+				top: 40px
+			.swiper-button-prev,.swiper-button-next
+				background-image: none
+				width: 40px
+				height: 40px
+				display: flex
+				align-items: center
+				justify-content: center
+				&:hover
+					span
+						@apply text-green-3
+				span
+					color: #666666
+					font-size: 30/16*1rem
+					&::before
+						display: flex
+						align-items: center
+						justify-content: center
+				&.swiper-button-disabled
+					opacity: 0.3
+			.swiper-button-next,.swiper-button-prev
+				top: 40.3587%
+			.swiper-button-next
+				right: -5%
+				top: 40%
+			.swiper-button-prev
+				left: -5%

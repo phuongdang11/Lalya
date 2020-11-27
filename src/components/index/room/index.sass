@@ -1,0 +1,40 @@
+.home-accommodation-swiper
+	.btn-center
+		@apply pb-6
+		@screen lg
+			@apply pt-2 pb-12
+.home-accommodation
+	@apply pb-8
+	.home-room
+		@apply pb-8
+		.big-img-wrap
+			a
+				+img-ratio(630/1230)
+		.sub-title
+			@apply pt-6 pb-4
+			@screen lg
+				@apply pt-10 pb-8
+		.caption
+			@apply p-0
+			@screen lg
+				padding: 0 8.33%
+			@screen xl
+				padding: 0 16.66%
+	
+.home-accommodation-three
+	@apply relative
+	.image-wrap
+		a
+			+img-ratio(230/390)
+	.sub-title
+		@apply pt-6 pb-4
+		@screen lg
+			@apply pb-6
+	.caption
+		display: -webkit-box
+		-webkit-line-clamp: 2
+		-webkit-box-orient: vertical
+		overflow: hidden
+		@apply mb-2
+		@screen lg
+			@apply px-4 

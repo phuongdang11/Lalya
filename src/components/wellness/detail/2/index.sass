@@ -1,0 +1,52 @@
+.wellness_detail-2
+	height: 600px
+	@apply relative
+	&::after
+		content: ''
+		@apply block absolute pointer-events-none left-0 bottom-0 z-10 transition w-full h-full 
+		z-index: -1
+		background: rgba(#000000,.5 )
+	@media screen and ( max-width: 767px  )
+		height: 450px
+	.wrapper
+		padding-top: 57px
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 100%
+		flex-direction: column
+	.title
+		h2
+			padding: 0 15px
+			color: #fff
+			font-size: 36/16*1rem
+			font-weight: 400
+			font-weight: 200
+			text-align: center
+			strong
+				margin-top: 15px
+				display: block
+				font-size: 20/16*1rem
+				font-weight: 500
+	a.btn.btn-booknow
+		width: 220px
+		height: 40px
+		background-color: #ffffff
+		margin-top: 35px
+		display: flex
+		align-items: center
+		justify-content: center
+		transition: 0.3s all ease
+		p
+			transition: 0.3s all ease
+			color: $green-3
+			font-size: 14/16*1rem
+			font-weight: 500
+			margin-left: 10px
+		img
+			transition: 0.3s all ease
+		&:hover
+			img
+				transform: translateX(-5px)
+			p
+				font-size: 1rem

@@ -1,0 +1,135 @@
+.meeting
+    @apply py-16 bg-grey-4
+    .mt-60
+        margin-top: 60px
+    .zone-description
+        padding-left: 70px
+        padding-right: 70px
+    .brochure
+        width: 220px
+        height: 40px
+        background-color: $green-3
+        color: $white
+        // border: 1px solid $green-3
+        padding: 12px 0 0 55px
+        display: flex
+        font-weight: 500
+        &:hover
+            background-color: $white
+            color: $green-3
+            border: 1px solid $green-3
+            transition: .5s
+            font-weight: 500
+            a
+                color: $green-3
+                font-size: 0.875rem
+        a   
+            color: $white
+            text-transform: uppercase
+            font-size: 0.875rem
+            padding-left: 10px
+    .form-menu
+        margin-top: 40px
+        width: 100%
+        min-height: 205px
+        overflow-y: auto
+        .row
+            margin-left: -0.5px
+            margin-right: -0.5px
+        .col
+            // padding-top: 0
+            padding-left: 0.5px
+            padding-right: 0.5px
+        table
+            overflow-x:auto
+            border: 1px solid $grey-4
+            background-color: $white
+            th
+                text-align: center
+                background-color: $green-3
+                color: $white
+                padding: 20px
+                border: 1px solid $grey-4
+                font-size: 0.75rem
+            td  
+                font-size: 0.875rem
+                border: 1px solid $grey-4
+                padding: 20px
+                text-align: center
+    .form-info-tittle
+        width: 100%
+        height: 75px
+        background-color: $green-3
+        padding-top: 20px
+        padding-left: 30px
+        padding-right: 40px
+        color: $white
+        text-transform: uppercase
+        font-weight: 600
+        font-size: 0.75rem
+    .form-info-text
+        width: 100%
+        height: 65px
+        background-color: $white
+        padding-left: 30px
+        padding-right: 40px
+        padding-top: 20px
+        text-transform: uppercase
+        font-weight: 400
+        font-size: 0.75rem
+        border-top: 1px solid #e1e1e1
+    .content
+        margin-top: 50px
+        width: 100%
+        min-height: 420px
+        .row
+            &:nth-child(even)
+                flex-direction: row-reverse
+    .image-content
+        width: 100%
+        min-height: 120px
+        display: block
+        min-height: 120px
+        width: auto
+        img
+            width: 100%
+            height: auto
+            object-fit: cover
+    .text-content
+        width: 100%
+        min-height: 120px
+        padding-top: 30px
+        padding-left: 10px
+        .tittle
+            font-weight: 500
+            font-size: 1.25rem
+        .text 
+            padding-top: 20px
+            padding-left: 20px
+            padding-right: 5px
+            font-size: 0.8125rem
+            line-height: 1.25rem
+        ul li   
+            list-style: disc
+            line-height: 1.5rem
+    @media screen and (max-width:768px)
+        .text-content
+            padding-top: 0
+            .text
+                padding-top: 0
+                padding-right: 15px
+                margin-top: 10px
+                height: 150px
+                overflow: auto
+            ::-webkit-scrollbar
+                width: 2px
+            ::-webkit-scrollbar-thumb 
+                background-color: $green-3
+                border-radius: 10px
+        .brochure
+            padding-left: 65px
+            padding-top: 15px
+    @media screen and (max-width: 576px)
+        .zone-description
+            padding-right: 0
+            padding-left: 0

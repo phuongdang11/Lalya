@@ -1,0 +1,46 @@
+.subscribe
+	@apply w-full
+	.subscribethanks 
+		@apply text-white text-left text-14
+	.subscribefrm
+		@apply relative w-full
+		width: 280px
+		@media screen and ( max-width: 767px)
+			@apply w-full
+			
+		.fa-exclamation-triangle
+			@apply absolute  left-0 font-light text-primary italic text-12
+			bottom: -23px
+			
+		input
+			height: 45px
+			padding: 0  50px 0 20px
+			border: 1px solid  rgba(white, .5)
+			@apply  text-13 font-normal w-full text-white transition  bg-green-1 
+			width: 280px
+			@media screen and ( max-width: 1024px)
+				@apply w-full
+				
+			&::placeholder
+				@apply text-13 font-light  text-white
+			&:focus
+				outline: none
+				border: 1px solid #ffffff
+		button
+			@apply absolute  flex  items-center justify-center transition h-full 
+			bottom: 0
+			height: 44px
+			right: 0
+			width: 44px
+			border: 1px solid transparent
+			&:focus
+				outline: none
+			&:hover
+				@apply bg-white 
+				em
+					@apply text-green-1
+			em
+				@apply  text-white transition 
+				font-size: 18px
+				transition: .3s all ease-in-out
+				height: 18px

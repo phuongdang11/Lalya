@@ -1,0 +1,113 @@
+footer
+	@apply  bg-green-1 overflow-hidden pointer-events-auto
+.footer-support
+	@apply bg-grey-4
+	height: 50px
+	border-top: 1px solid #d7d7d7
+	.text
+		@apply text-13 text-grey-3 flex
+		a
+			@apply inline-block mx-1 underline transition
+			&:hover
+				@apply text-green-1
+.footer-top
+	@apply pt-16 pb-10
+	@screen lg
+		@apply pb-16
+	.title
+		@apply text-20 text-white font-medium mb-4
+		@screen lg
+			@apply mb-6
+	ul,ol
+		li
+			@apply flex items-start justify-start mb-3
+			em
+				@apply text-white mt-1 inline-block mr-3
+				font-size: 16px
+				height: 16px
+				line-height: 16px
+				opacity: .7
+			span,a
+				@apply text-13 text-white font-normal leading-relaxed
+				opacity: .7
+				&:hover
+					@apply text-white underline
+			
+	ul
+		li
+			@apply mb-3  font-normal
+			opacity: .7
+	.title-medium
+		@apply text-20 text-white font-medium mt-6 mb-4
+		@screen lg
+			@apply mt-10 mb-6
+	.social-network
+		@apply flex 
+		a
+			@apply flex justify-center items-center rounded-full 
+			height: 40px
+			&:not(:last-child)
+				@apply mr-4
+				@screen lg
+					@apply mr-6
+			em
+				@apply text-white
+				font-size: 20px
+				height: 20px
+				line-height: 20px
+	.social-wrap
+		@media screen and ( max-width: 767px)
+			@apply flex flex-col justify-center items-center
+			.ModuleContent
+				@apply flex flex-col justify-center items-center
+			
+
+.footer-bottom
+	.container
+		&::after
+			content: ''
+			@apply block absolute pointer-events-none left-0 top-0 z-10 transition
+			height: 1px
+			width: 100%
+			background: #335e45 
+		@media screen and ( max-width: 1024px)
+			@apply flex-col py-6
+			
+	.copyright
+		@apply text-white text-12 flex text-center leading-relaxed font-light
+		opacity: .7
+		@media screen and ( max-width: 420px)
+			@apply inline
+		* 
+			@apply text-white text-12 mb-0
+			opacity: .7
+		a
+			@apply inline-block mx-1 font-light
+			opacity: .7
+		
+				
+			&:hover
+				@apply underline
+	.term-service
+		@screen xl
+			@apply pl-40
+		@media screen and ( max-width: 1024px)
+			@apply py-4
+			
+		ul
+			li
+				@apply inline-block px-4 font-light
+			a
+				@apply text-12 text-white font-light
+				opacity: .7
+				&:hover
+					@apply underline
+	.wrap-left
+		@media screen and ( max-width: 1024px)
+			@apply flex flex-col justify-center items-center
+.back-to-top
+	span
+		@apply font-light
+	&:hover
+		span
+			@apply underline

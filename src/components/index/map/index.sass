@@ -1,0 +1,18 @@
+.home-map
+	@apply py-16
+	@screen lg
+		@apply pt-16 pb-18
+	.map-iframe
+		max-width: 1030px
+		@apply mx-auto
+		@media screen and ( max-width: 1024px)
+			display: block
+			height: 300px
+			width: auto
+			iframe
+				width: 100%
+				height: 100%
+				object-fit: cover
+			
+		@screen lg
+			+img-ratio(330/1030)

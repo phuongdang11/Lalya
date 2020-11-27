@@ -1,0 +1,97 @@
+.wellness_detail-1
+	@apply pt-16 bg-grey-4 pb-4
+	@screen lg
+		@apply pb-4
+	.section-title
+		padding-bottom: 30px
+	.btn-center
+		@apply pt-4 mb-12
+		@screen lg
+			@apply mb-10
+		.btn-primary
+			width: 220px
+			min-width: 220px
+			&:hover
+				em
+					@apply text-green-2
+			em
+				@apply text-white mr-2
+				font-size: 18px
+				height: 18px
+				line-height: 18px
+	.section-description
+		@screen lg
+			padding: 0 16%
+	.swiper-nav-wrap
+		@media screen and ( max-width: 1024px)
+			@apply mt-12
+			
+	.single-swiper
+		@apply relative
+		.wrapper
+			a
+				+img-ratio(375/600)
+		.nav-arrow-next
+			right: 0
+		.nav-arrow-prev
+			left: 0
+		.nav-arrow-prev,.nav-arrow-next
+			width: 40px
+			height: 40px
+			background: rgba(#000000, .3)
+			@apply pointer-events-auto
+			@media screen and ( max-width: 1024px)
+				width: 30px
+				height: 30px
+			
+					
+			&:hover
+				background: #006333
+			&.swiper-button-disabled
+				opacity: 100
+			em
+				@apply text-white
+				font-size: 30px
+				height: 30px
+				line-height: 30px
+				@media screen and ( max-width: 1024px)
+					font-size: 20px
+					height: 20px
+					line-height: 20px
+					
+	.row
+		@apply m-0 p-0 mb-8
+		@media screen and ( max-width: 1024px)
+			@apply mb-4 
+			
+		&:nth-child(odd)
+			@apply flex-row-reverse
+			.content
+				padding: 30px 50px 30px 0
+				@media screen and ( max-width: 1280px)
+					padding: 20px 30px 20px 0
+				@media screen and ( max-width: 1024px)
+					padding: 0 0 30px 0
+					
+			
+		.col
+			@apply m-0 p-0
+	.scollbar-wrap
+		height: 250px
+		@media screen and ( max-width: 1280px)
+			height: 200px
+			
+	.content
+		padding: 30px 0 30px 50px
+		@media screen and ( max-width: 1280px)
+			padding: 20px 0 20px 30px
+		@media screen and ( max-width: 1024px)
+			padding: 0 0 30px 0
+		@media screen and ( max-width: 767px)
+			@apply pt-4
+			
+	.caption
+		strong
+			@apply font-bold uppercase text-main
+		*
+			@apply mb-4
