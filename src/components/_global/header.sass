@@ -1,6 +1,6 @@
 header
 	@apply fixed top-0 left-0 right-0 w-full overflow-hidden
-	height: 120px
+	height: 90px
 	z-index: 99
 	.header-top
 		@apply bg-green-1 h-full
@@ -155,10 +155,14 @@ header
 		@apply flex justify-center items-center bg-white
 		width: 110px
 		height: 90px
+		@media screen and ( max-width: 576px )
+			background: none
 		img,svg
 			max-width: 100%
 			height: auto
 			width: 75px
+			@media screen and ( max-width: 576px )
+				filter: brightness(30);
 		@media screen and ( max-width: 1280px)
 			width: 70px
 			img,svg
