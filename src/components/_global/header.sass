@@ -71,7 +71,7 @@ header
 	@media screen and ( max-width:1024px)
 		@apply flex items-start justify-center flex-col pt-6
 	li
-		@apply inline-block h-full px-4
+		@apply inline-block h-full px-4 relative
 		@media screen and ( max-width:1280px)
 			@apply  px-2
 			&:last-child
@@ -114,29 +114,56 @@ header
 				&::before
 					opacity: 1
 					@apply w-full
+		&.drop-down
+			@media screen and ( max-width: 1024px)
+				@apply flex flex-col
+			@screen lg
+				&:hover
+					.sub-nav
+						@apply flex
+						-webkit-animation: fade-in .3s cubic-bezier(0.39, 0.575, 0.565, 1) both
+						animation: fade-in .3s cubic-bezier(0.39, 0.575, 0.565, 1) both
+						background: #145730
+			.sub-nav
+				@apply hidden h-auto p-5
+				@screen lg
+					@apply absolute top-100 left-0   flex-col justify-start items-start 
+					width: max-content
+				@media screen and ( max-width: 1024px)
+					@apply p-0
+
+				li
+					@apply p-0
+					@media screen and ( max-width: 1024px)
+						@apply flex text-left
+						height: 40px
+						
+					&:last-child
+						@apply pr-0
+						border-radius: 0
+					&:first-child
+						@apply pl-0
+						border-radius: 0
+					&:hover
+						background: none
+						a
+							background: none
+				a
+					@apply text-16 font-normal normal-case text-white  py-2
+		.title
+			@apply flex items-center justify-between relative h-full
+			@media screen and ( max-width: 1024px)
+				@apply w-full
+			em
+				font-size: 14px
+				height: 14px
+				line-height: 14px
+				color: white
+				@apply inline-block ml-1 transition
+				@media screen and ( min-width: 1024.1px )
+					display: none
 	@media screen and ( max-width:1024px)
 		height: auto
-	@media screen and ( max-width: 1024px )
-		li.drop-down
-			.sub-nav
-				display: none
-	@media screen and ( min-width: 1024.1px )
-		li.drop-down
-			position: relative
-			.sub-nav
-				display: none
-			&:hover
-				.sub-nav
-					display: flex
-					position: absolute
-					left: -50%
-					top: 100%
-					width: max-content
-					height: auto
-					z-index: 9999
-					flex-direction: column
-					background-color: #145730
-					transition: all .3s ease-in-out
 .mobile-wrapper
 	@apply fixed  left-0  z-0 overflow-y-auto opacity-0  pointer-events-none 
 	transform: translateX(-100%)

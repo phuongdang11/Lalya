@@ -395,6 +395,20 @@ function toggleMobileMenu() {
 		$(".mobile-wrapper").toggleClass("active");
 		$hamburger.toggleClass("is-active");
 	});
+	$('.drop-down .title em').on('click', function () {
+		if ($(this).parents('.drop-down').hasClass('open-sub')) {
+			console.log(12310)
+			$('.drop-down .sub-nav').slideUp();
+			$('.drop-down').removeClass('open-sub');
+		} else {
+			$('.drop-down .sub-nav').slideUp();
+			$('.drop-down').removeClass('open-sub');
+			$(this).parent().next().slideDown();
+			$(this).parents('.drop-down').addClass('open-sub')
+			console.log(9999)
+		}
+
+	})
 }
 
 //Sticky navigation
