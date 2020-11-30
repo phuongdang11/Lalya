@@ -1,5 +1,5 @@
 header
-	@apply fixed top-0 left-0 right-0 w-full overflow-hidden
+	@apply fixed top-0 left-0 right-0 w-full
 	height: 90px
 	z-index: 99
 	.header-top
@@ -116,20 +116,27 @@ header
 					@apply w-full
 	@media screen and ( max-width:1024px)
 		height: auto
-	li.drop-down
-		position: relative
-		.sub-nav
-			@apply hidden
-		&:hover
+	@media screen and ( max-width: 1024px )
+		li.drop-down
 			.sub-nav
-				display: flex
-				position: absolute
-				top: 100%
-				width: 300px
-				height: 500px
-				z-index: 9999
-				flex-direction: column
-				background-color: #145730
+				display: none
+	@media screen and ( min-width: 1024.1px )
+		li.drop-down
+			position: relative
+			.sub-nav
+				display: none
+			&:hover
+				.sub-nav
+					display: flex
+					position: absolute
+					left: -50%
+					top: 100%
+					width: max-content
+					height: auto
+					z-index: 9999
+					flex-direction: column
+					background-color: #145730
+					transition: all .3s ease-in-out
 .mobile-wrapper
 	@apply fixed  left-0  z-0 overflow-y-auto opacity-0  pointer-events-none 
 	transform: translateX(-100%)
