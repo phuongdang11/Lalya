@@ -116,7 +116,20 @@ header
 					@apply w-full
 	@media screen and ( max-width:1024px)
 		height: auto
-
+	li.drop-down
+		position: relative
+		.sub-nav
+			@apply hidden
+		&:hover
+			.sub-nav
+				display: flex
+				position: absolute
+				top: 100%
+				width: 300px
+				height: 500px
+				z-index: 9999
+				flex-direction: column
+				background-color: #145730
 .mobile-wrapper
 	@apply fixed  left-0  z-0 overflow-y-auto opacity-0  pointer-events-none 
 	transform: translateX(-100%)
