@@ -361,11 +361,11 @@ function mappingSearch() {
 
 function mapppingButton() {
 	return new MappingListener({
-		selector: ".btn-wrap-reservation",
+		selector: ".language-wrapper",
 		mobileWrapper: ".mobile-wrapper",
 		mobileMethod: "appendTo",
-		desktopWrapper: ".language-wrapper",
-		desktopMethod: "insertAfter",
+		desktopWrapper: ".btn-wrap-reservation ",
+		desktopMethod: "insertBefore",
 		breakpoint: 1025,
 	}).watch();
 }
@@ -387,6 +387,19 @@ function toggleItem() {
 	});
 }
 
+// Search full screen
+function openSearch() {
+	document.getElementById("myOverlay").style.opacity = "1";
+	document.getElementById("myOverlay").style.visibility = "visible";
+	document.getElementById("myOverlay").style.width = "100%";
+	}
+
+	function closeSearch() {
+	document.getElementById("myOverlay").style.visibility = "hidden";
+	document.getElementById("myOverlay").style.opacity = "0";
+	document.getElementById("myOverlay").style.width = "0";
+	}
+
 //Toggle mobile menu
 
 function toggleMobileMenu() {
@@ -397,7 +410,6 @@ function toggleMobileMenu() {
 	});
 	$('.drop-down .title em').on('click', function () {
 		if ($(this).parents('.drop-down').hasClass('open-sub')) {
-			console.log(12310)
 			$('.drop-down .sub-nav').slideUp();
 			$('.drop-down').removeClass('open-sub');
 		} else {
@@ -405,7 +417,6 @@ function toggleMobileMenu() {
 			$('.drop-down').removeClass('open-sub');
 			$(this).parent().next().slideDown();
 			$(this).parents('.drop-down').addClass('open-sub')
-			console.log(9999)
 		}
 
 	})
@@ -454,6 +465,8 @@ function stickyNav() {
 		});
 	}
 }
+
+
 
 //Tab active
 

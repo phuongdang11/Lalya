@@ -1,5 +1,32 @@
 .accomodation-list
+	// .row>*
+	// 	margin-bottom: 0px !important
 	@apply py-16 bg-grey-4
+	@media screen and ( max-width: 576px )
+		@apply py-4
+
 	.image-wrap
 		@apply mb-4
+		img
+			width: 100%
+			height: 100%
+	.image-wrap2
+		height: 400px
+		img
+			width: 100%
+			height: 100%
+		@media screen and ( max-width: 1024px )
+			height: auto
+	.box-caption
+		white-space: pre-wrap
+		overflow: hidden
+		text-overflow: ellipsis
+		-webkit-line-clamp: 2
+		-webkit-box-orient: vertical
+		display: -webkit-box
+	.btn-view-more
+		margin-bottom: 30px
+	.content
+		padding-top: 10px
+
 

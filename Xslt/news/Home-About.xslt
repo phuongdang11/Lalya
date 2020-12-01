@@ -60,9 +60,9 @@
 					<div class="scollbar-wrap">
 						<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
 					</div>
-					<div class="btn-left"><a class="btn btn-view-more green" href="javascript:;"><span>see
+					<!-- <div class="btn-left"><a class="btn btn-view-more green" href="javascript:;"><span>see
 								more</span></a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</xsl:if>
@@ -73,7 +73,7 @@
 
 			<div class="col w-full md:w-4/12" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-delay="0"
 				data-aos-duration="650" data-aos-offset="250">
-				<div class="image-wrapper opacity"><a href="javascript:;">
+				<div class="image-wrapper"><a href="javascript:;">
 						<img>
 						<xsl:attribute name="src">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -88,7 +88,7 @@
 		<xsl:if test="position()=3">
 			<div class="col w-full md:w-8/12" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-delay="0"
 				data-aos-duration="650" data-aos-offset="250">
-				<div class="image-wrapper opacity"><a href="javascript:;">
+				<div class="image-wrapper"><a href="javascript:;">
 						<img>
 						<xsl:attribute name="src">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>

@@ -75,7 +75,7 @@
 		<xsl:if test="position() >1 and position() &lt;4">
 			<div class="col w-full lg:w-1/2">
 				<div class="item">
-					<div class="image-wrap zoom-in">
+					<div class="image-wrap2 zoom-in">
 						<a>
 							<xsl:attribute name="href">
 								<xsl:value-of select="Url"></xsl:value-of>
@@ -109,14 +109,14 @@
 						<div class="box-caption caption text-center">
 							<xsl:value-of disable-output-escaping="yes" select="Description"></xsl:value-of>
 						</div>
-						<div class="btn-center py-5"><a class="btn btn-view-more">
+						<div class="btn-center"><a class="btn btn-view-more">
 								<xsl:attribute name="href">
 									<xsl:value-of select="Url"></xsl:value-of>
 								</xsl:attribute>
 								<xsl:attribute name="title">
 									<xsl:value-of select="Title"></xsl:value-of>
 								</xsl:attribute>
-								<span>View
+								<span>See
 									more</span>
 							</a></div>
 					</div>
@@ -178,7 +178,7 @@
 		<xsl:if test="position() >4 and position() &lt;6">
 			<div class="col w-full lg:w-1/2">
 				<div class="item">
-					<div class="image-wrap zoom-in">
+					<div class="image-wrap2 zoom-in">
 						<a>
 							<xsl:attribute name="href">
 								<xsl:value-of select="Url"></xsl:value-of>
@@ -211,14 +211,14 @@
 						<div class="box-caption caption text-center">
 							<xsl:value-of disable-output-escaping="yes" select="Description"></xsl:value-of>
 						</div>
-						<div class="btn-center py-5"><a class="btn btn-view-more">
+						<div class="btn-center"><a class="btn btn-view-more">
 								<xsl:attribute name="href">
 									<xsl:value-of select="Url"></xsl:value-of>
 								</xsl:attribute>
 								<xsl:attribute name="title">
 									<xsl:value-of select="Title"></xsl:value-of>
 								</xsl:attribute>
-								<span>View more</span>
+								<span>See more</span>
 							</a></div>
 					</div>
 				</div>

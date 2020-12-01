@@ -196,10 +196,9 @@
 	@media screen and ( max-width: 1024px)
 		@apply px-6 mt-4 flex justify-start
 	.search-toggle
-		@apply hidden
+		@apply  cursor-pointer
 		@screen lg
 			@apply flex items-center justify-center uppercase  text-12 transition relative  h-full
-			width: 35px
 			z-index: 999
 	
 		em
@@ -207,4 +206,63 @@
 			font-size: 18px
 			height: 18px
 			line-height: 18px
-	
+	.overlay
+		height: 100%
+		width: 0
+		position: fixed
+		transition: 2s
+		visibility: hidden
+		opacity: 0
+		z-index: 1
+		transition: all .7s ease-in-out
+		top: 0
+		left: 0
+		background-color: rgba(0,0,0, 0.6)
+		.closebtn
+			position: absolute
+			top: 20px
+			right: 45px
+			font-size: 60px
+			cursor: pointer
+			color: white
+	.search-box 
+		position: relative
+		top: 46%
+		width: 80%
+		text-align: center
+		margin-top: 30px
+		margin: auto
+		@media screen and ( max-width: 576px )
+			top: 60%
+		input[type=text]
+			padding: 15px
+			font-size: 17px
+			border: none
+			width: 50%
+			background: white
+			border-radius: 30px
+			outline: 0
+			&::placeholder
+				font-size: r(18px)
+			@media screen and ( max-width: 1024px )
+				width: 100% 
+				display: flex
+		button
+			width: 10%
+			padding: 14px
+			border-radius: 30px
+			background: #145730
+			color: white
+			font-size: 20px
+			border: none
+			cursor: pointer
+			outline: 0
+			transition: left .5s
+			&:hover
+				background: #fff
+				color: #426450
+				font-size: 20px
+			@media screen and ( max-width: 1024px )
+				width: 20%
+				margin-top: 10px
+

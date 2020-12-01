@@ -58,7 +58,9 @@ header
 		@apply ml-4
 		@media screen and ( max-width: 1024px)
 			@apply ml-6 mt-6
-			
+			display: contents
+		// @media screen and ( max-width: 576px )
+		// 	@apply mt-6
 
 
 .navbar-primary-menu
@@ -196,7 +198,7 @@ header
 			height: auto
 			width: 75px
 			@media screen and ( max-width: 576px )
-				filter: brightness(30);
+				filter: brightness(30)
 		@media screen and ( max-width: 1280px)
 			width: 70px
 			img,svg
@@ -214,10 +216,15 @@ header
 	@media screen and ( max-width:1024px)
 		border: 0
 		@apply mr-4 pl-0
+	@media screen and ( max-width: 1024px )
+		padding-left: 20px
+		padding-top: 20px
 	&:hover 
 		@apply overflow-visible
 		.language-list
 			@apply  opacity-100 pointer-events-auto
+		@media screen and ( max-width: 1024px )
+			// padding-left: 40px
 		.current-language
 			a
 				em
@@ -240,7 +247,7 @@ header
 	.language-list
 		@apply absolute list-none m-0 p-0 top-100  left-0 opacity-0 pointer-events-none transition pt-2  bg-green-1 px-4 pb-1
 		@media screen and ( max-width: 1024px)
-			left: -10px
+			left: 20px
 			
 		li
 			@apply inline-block

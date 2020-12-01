@@ -16,12 +16,14 @@ header
 								a(href="javascript:;") news - events
 				.wrap-right
 					.search-wrapper
-						.search-toggle
+						.search-toggle.openBtn(onclick='openSearch()')
 							em.mdi.mdi-magnify
-						.searchbox
-							input(type="text",placeholder='Search')
-							button
-								em.mdi.mdi-magnify
+						#myOverlay.overlay
+							span.closebtn(onclick='closeSearch()' title='Close Overlay') ×
+							.search-box
+								input(type='text' placeholder='Tìm kiếm' name='search')
+								button(type='submit')
+									em.mdi.mdi-magnify
 					.language-wrapper
 						.current-language
 							a(href="javascript:;")
