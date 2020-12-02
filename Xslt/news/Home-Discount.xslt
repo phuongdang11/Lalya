@@ -35,7 +35,7 @@
 				<div class="image-wrap">
 					<a>
 						<xsl:attribute name="href">
-							<xsl:text>javascript:;</xsl:text>
+							<xsl:value-of select="Url"></xsl:value-of>
 						</xsl:attribute>
 						<xsl:attribute name="title">
 							<xsl:value-of select="Title"></xsl:value-of>
@@ -54,7 +54,7 @@
 					<div class="sub-title medium green">
 						<a>
 							<xsl:attribute name="href">
-								<xsl:text>javascript:;</xsl:text>
+								<xsl:value-of select="Url"></xsl:value-of>
 							</xsl:attribute>
 							<xsl:attribute name="title">
 								<xsl:value-of select="Title"></xsl:value-of>

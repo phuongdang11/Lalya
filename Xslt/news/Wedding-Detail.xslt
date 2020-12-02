@@ -3,7 +3,7 @@
 	xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes" />
 
-	<xsl:template match="/NewsDetail"> 
+	<xsl:template match="/NewsDetail">
 		<section class="weeding-detail">
 			<div class="container">
 				<div class="section-title text-center">
@@ -12,21 +12,28 @@
 				</div>
 				<div class="flex justify-center bg-gray-200">
 					<div class="text-gray-700 text-center px-4 m-2">
-						<div class="book-now mdi mdi-pencil"><a href="">Book Now</a></div>
+						<div class="book-now mdi mdi-pencil"><a>
+
+								<xsl:attribute name="href">
+									<xsl:text>https://lalya.reserve-online.net/?checkin=&amp;checkout=&amp;adults=1
+									</xsl:text>
+								</xsl:attribute>
+								Book Now
+							</a></div>
 					</div>
 				</div>
 				<div class="item-1">
 					<div class="row">
-						<xsl:apply-templates select="NewsImages" mode="Small"/>
+						<xsl:apply-templates select="NewsImages" mode="Small" />
 					</div>
 					<div class="row">
-						<xsl:apply-templates select="NewsImages" mode="Other"/>
+						<xsl:apply-templates select="NewsImages" mode="Other" />
 					</div>
-				</div> 
+				</div>
 			</div>
 			<div class="banner-detail" setBackground="./img/wedding/banner-detail.png">
 				<xsl:attribute name="setBackground">
-					<xsl:value-of select="NewsImages[position() = last()]/ImageUrl"/>
+					<xsl:value-of select="NewsImages[position() = last()]/ImageUrl" />
 				</xsl:attribute>
 				<div class="container">
 					<div class="info-banner">
@@ -37,7 +44,7 @@
 							<xsl:value-of disable-output-escaping="yes" select="ZoneTitle"></xsl:value-of>
 						</div>
 						<div class="content">
-							<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of> 
+							<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
 						</div>
 					</div>
 				</div>
@@ -50,22 +57,22 @@
 				<div class="box-image zoom-in">
 					<a href="./img/wedding/box-1.png" tittle="" data-fancybox="image-1">
 						<xsl:attribute name="href">
-							<xsl:value-of select="ImageUrl"/>
+							<xsl:value-of select="ImageUrl" />
 						</xsl:attribute>
 						<xsl:attribute name="tittle">
-							<xsl:value-of select="Title"/>
+							<xsl:value-of select="Title" />
 						</xsl:attribute>
 						<img src="./img/wedding/box-1.png" alt="">
-							<xsl:attribute name="src">
-								<xsl:value-of select="ImageUrl"/> 
-							</xsl:attribute>
-							<xsl:attribute name="alt">
-								<xsl:value-of select="Title"/>
-							</xsl:attribute>
+						<xsl:attribute name="src">
+							<xsl:value-of select="ImageUrl" />
+						</xsl:attribute>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="Title" />
+						</xsl:attribute>
 						</img>
 					</a>
 				</div>
-			</div> 
+			</div>
 		</xsl:if>
 	</xsl:template>
 
@@ -75,18 +82,18 @@
 				<div class="box-image zoom-in">
 					<a href="./img/wedding/box-1.png" tittle="" data-fancybox="image-1">
 						<xsl:attribute name="href">
-							<xsl:value-of select="ImageUrl"/>
+							<xsl:value-of select="ImageUrl" />
 						</xsl:attribute>
 						<xsl:attribute name="tittle">
-							<xsl:value-of select="Title"/>
+							<xsl:value-of select="Title" />
 						</xsl:attribute>
 						<img src="./img/wedding/box-1.png" alt="">
-							<xsl:attribute name="src">
-								<xsl:value-of select="ImageUrl"/> 
-							</xsl:attribute>
-							<xsl:attribute name="alt">
-								<xsl:value-of select="Title"/>
-							</xsl:attribute>
+						<xsl:attribute name="src">
+							<xsl:value-of select="ImageUrl" />
+						</xsl:attribute>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="Title" />
+						</xsl:attribute>
 						</img>
 					</a>
 				</div>

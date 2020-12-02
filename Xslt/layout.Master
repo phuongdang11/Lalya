@@ -56,7 +56,8 @@
 							</div>
 							<div class="wrap-right">
 								<div class="search-wrapper">
-									<div class="search-toggle"><em class="mdi mdi-magnify"></em></div>
+									<div class="search-toggle openBtn" onclick="openSearch()"><em
+											class="mdi mdi-magnify"></em></div>
 									<portal:ModuleWrapper ID="mdl140" runat="server" ConfigureModuleId="140" />
 								</div>
 								<div class="language-wrapper">
@@ -243,7 +244,7 @@
 	</form>
 	<script src="/Data/Sites/1/skins/default/js/core.min.js?v=1.0.0"></script>
 	<script src="/Data/Sites/1/skins/default/js/main.min.js?v=1.0.0"></script>
-	<script src="/Data/Sites/1/skins/default/js/custom.js?v=1.0.0"></script>  
+	<script src="/Data/Sites/1/skins/default/js/custom.js?v=1.0.0"></script>
 </body>
 
 </html>

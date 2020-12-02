@@ -34,6 +34,8 @@ header
 			@media screen and ( max-width: 1024px)
 				@apply block
 	.nav-primary-top
+		@media screen and ( max-width: 1024px)
+			@apply hidden
 		ul
 			@apply flex
 			@media screen and ( max-width: 1024px)
@@ -71,7 +73,9 @@ header
 	@media screen and ( max-width: 1280px)
 		@apply justify-end mr-0
 	@media screen and ( max-width:1024px)
-		@apply flex items-start justify-center flex-col pt-6
+		@apply hidden items-start justify-center flex-col pt-6
+	ul
+		@apply w-full
 	li
 		@apply inline-block h-full px-4 relative
 		@media screen and ( max-width:1280px)
@@ -215,7 +219,7 @@ header
 	border-left: 1px solid white
 	@media screen and ( max-width:1024px)
 		border: 0
-		@apply mr-4 pl-0
+		@apply mr-4 pl-0 hidden
 	@media screen and ( max-width: 1024px )
 		padding-left: 20px
 		padding-top: 20px

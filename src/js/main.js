@@ -4,8 +4,23 @@ $(document).ready(function () {
 	//Hide element when smaller than 1025
 	// $.fancybox.defaults.parentEl = "form";
 	if ($(window).width() < 1025) {
-		$(".main-menu-nav").fadeIn(function () {
-			$(".main-menu-nav").css({
+		$(".nav-primary-top").fadeIn(function () {
+			$(".nav-primary-top").css({
+				display: "flex",
+			});
+		});
+		$(".navbar-primary-menu").fadeIn(function () {
+			$(".navbar-primary-menu").css({
+				display: "flex",
+			});
+		});
+		$(".search-wrapper").fadeIn(function () {
+			$(".search-wrapper").css({
+				display: "flex",
+			});
+		});
+		$(".language-wrapper").fadeIn(function () {
+			$(".language-wrapper").css({
 				display: "flex",
 			});
 		});
@@ -47,6 +62,8 @@ $(document).ready(function () {
 	swiperInit();
 	backToTop();
 	setBackground();
+	openSearch();
+	closeSearch();
 
 	//Declare NEW function Javascript
 });
@@ -306,12 +323,12 @@ var swiper = new Swiper('.Slide-special-detail.swiper-container', {
 	loop: true,
 	loopFillGroupWithBlank: true,
 	pagination: {
-	  el: '.swiper-pagination',
-	  clickable: true,
+		el: '.swiper-pagination',
+		clickable: true,
 	},
 	navigation: {
-	  nextEl: '.lnr-arrow-next',
-	  prevEl: '.lnr-arrow-prev',
+		nextEl: '.lnr-arrow-next',
+		prevEl: '.lnr-arrow-prev',
 	},
 	breakpoints: {
 		576: {
@@ -321,7 +338,7 @@ var swiper = new Swiper('.Slide-special-detail.swiper-container', {
 			slidesPerView: 2,
 		}
 	}
-  });
+});
 
 
 //Mapping
@@ -392,13 +409,13 @@ function openSearch() {
 	document.getElementById("myOverlay").style.opacity = "1";
 	document.getElementById("myOverlay").style.visibility = "visible";
 	document.getElementById("myOverlay").style.width = "100%";
-	}
+}
 
-	function closeSearch() {
+function closeSearch() {
 	document.getElementById("myOverlay").style.visibility = "hidden";
 	document.getElementById("myOverlay").style.opacity = "0";
 	document.getElementById("myOverlay").style.width = "0";
-	}
+}
 
 //Toggle mobile menu
 
@@ -440,6 +457,7 @@ function setBackground() {
 		});
 	});
 }
+
 function stickyNav() {
 	if ($(".sticky-nav").length) {
 		$(".sticky-nav").scrollToFixed({

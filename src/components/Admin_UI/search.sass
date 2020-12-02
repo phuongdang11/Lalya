@@ -122,81 +122,12 @@
 		hr
 			display: none !important
 
-.searchbox
-	@apply relative w-full
-	@screen lg
-		bottom: 25px
-		z-index: 10
-		@apply right-100  opacity-0 overflow-visible absolute block h-0 w-full
-		transition: opacity .1s linear 0s,left 0s linear .1s
-
-		
-	&.active
-		@apply opacity-100
-		input
-			opacity: 1
-			pointer-events: auto
-			z-index: 1
-		input
-			cursor: auto
-		button
-			cursor: pointer
-	input
-		@media screen and ( max-width: 1024px)
-			height: 31px
-			width: 100%
-			padding: 0 40px 0 15px
-			
-		@screen lg
-			border: 1px solid #f1f1f1
-			padding: 0 16px
-			position: absolute
-			top: 0
-			height: 31px
-			right: 0
-			opacity: 0
-			cursor: none
-			pointer-events: none
-			z-index: -1
-			transition: opacity .3s ease-in-out
-			font-size: 16px
-			color: #333333
-		@media screen and ( max-width:  576px)
-			@apply w-full static
-			
-		&:focus
-			outline: none
-			transition: none
-		&::placeholder
-			font-size: 13px
-	
-			
-	button
-		@apply bg-green-2
-		width: 32px
-		height: 31px
-		opacity: 1
-		pointer-events: auto
-		z-index: 1
-		cursor: pointer
-		border: none
-		pointer-events: auto
-		position: absolute
-		top: 0
-		right: 0
-		transition: all .3s ease-in-out
-		
-			
-		em
-			color: #ffffff
-		&:focus
-			outline: none
 .search-wrapper
 	@apply  relative pr-2  mr-0
 	@media screen and ( max-width: 1024px)
-		@apply px-6 mt-4 flex justify-start
+		@apply px-6 mt-4 hidden justify-start
 	.search-toggle
-		@apply  cursor-pointer
+		@apply  cursor-pointer hidden
 		@screen lg
 			@apply flex items-center justify-center uppercase  text-12 transition relative  h-full
 			z-index: 999
@@ -207,33 +138,40 @@
 			height: 18px
 			line-height: 18px
 	.overlay
-		height: 100%
-		width: 0
-		position: fixed
-		transition: 2s
-		visibility: hidden
-		opacity: 0
-		z-index: 1
-		transition: all .7s ease-in-out
-		top: 0
-		left: 0
-		background-color: rgba(0,0,0, 0.6)
-		.closebtn
-			position: absolute
-			top: 20px
-			right: 45px
-			font-size: 60px
-			cursor: pointer
-			color: white
-	.search-box 
-		position: relative
-		top: 46%
-		width: 80%
-		text-align: center
-		margin-top: 30px
-		margin: auto
-		@media screen and ( max-width: 576px )
-			top: 60%
+
+		@media screen and ( max-width: 1024px)
+			@apply block
+			opacity: 1 !important
+			visibility: visible !important
+			
+			
+		@screen lg
+			height: 100%
+			width: 0
+			position: fixed
+			transition: 2s
+			visibility: hidden
+			opacity: 0
+			z-index: 1
+			transition: all .7s ease-in-out
+			top: 0
+			left: 0
+			background-color: rgba(0,0,0, 0.6)
+			.closebtn
+				position: absolute
+				top: 20px
+				right: 45px
+				font-size: 60px
+				cursor: pointer
+				color: white
+	.searchbox 
+		@screen lg
+			@apply absolute top-50 translate-50 left-50
+			width: 80%
+			text-align: center
+			margin-top: 30px
+			margin: auto
+	
 		input[type=text]
 			padding: 15px
 			font-size: 17px
@@ -245,7 +183,7 @@
 			&::placeholder
 				font-size: r(18px)
 			@media screen and ( max-width: 1024px )
-				width: 100% 
+				width: 270px
 				display: flex
 		button
 			width: 10%
@@ -263,6 +201,10 @@
 				color: #426450
 				font-size: 20px
 			@media screen and ( max-width: 1024px )
-				width: 20%
+				width: 48px
+				height: 48px
 				margin-top: 10px
+				position: absolute
+				top: 6px
+				right: 32px
 

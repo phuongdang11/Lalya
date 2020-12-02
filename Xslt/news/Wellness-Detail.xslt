@@ -5,31 +5,35 @@
 
 	<xsl:template match="/NewsList">
 		<section class="wellness_detail-1">
-			<div class="container"> 
-				<div class="section-title text-center"> 
+			<div class="container">
+				<div class="section-title text-center">
 					<h1>
-				 		<xsl:value-of select="ZoneTitle" disable-output-escaping="yes"/>
+						<xsl:value-of select="ZoneTitle" disable-output-escaping="yes" />
 					</h1>
 				</div>
 				<div class="caption text-center">
-						<xsl:value-of select="ZoneDescription" disable-output-escaping="yes"/>
-				</div> 
+					<xsl:value-of select="ZoneDescription" disable-output-escaping="yes" />
+				</div>
 				<xsl:if test="ImageUrl != ''">
 					<div class="btn-center">
-						<a class="btn btn-primary" href="#">
+						<a class="btn btn-primary">
 							<xsl:attribute name="href">
-								<xsl:value-of select="ImageUrl"/>
+								<xsl:text>https://lalya.reserve-online.net/?checkin=&amp;checkout=&amp;adults=1
+								</xsl:text>
 							</xsl:attribute>
-								<em class="mdi mdi-pencil"></em>
+							<xsl:attribute name="href">
+								<xsl:value-of select="ImageUrl" />
+							</xsl:attribute>
+							<em class="mdi mdi-pencil"></em>
 							<span>Book now</span>
 						</a>
-					</div> 
+					</div>
 				</xsl:if>
-				<xsl:apply-templates select="News"  /> 
+				<xsl:apply-templates select="News" />
 			</div>
-		</section> 
+		</section>
 	</xsl:template>
-	<xsl:template match="News" >
+	<xsl:template match="News">
 
 		<div class="row">
 			<div class="col w-full lg:w-1/2">
@@ -57,21 +61,21 @@
 					</div>
 				</div>
 			</div>
-		</div> 
+		</div>
 	</xsl:template>
 
 
 
 	<xsl:template match="NewsImages" mode="Swiper">
-		<div class="swiper-slide"> 
-			<div class="img"> 
+		<div class="swiper-slide">
+			<div class="img">
 				<img src="./img/wellness/qwe.png" alt="">
-					<xsl:attribute name="alt">
-						<xsl:value-of select="Title"/>
-					</xsl:attribute>
-					<xsl:attribute name="src"> 
-						<xsl:value-of select="ImageUrl"/>
-					</xsl:attribute>
+				<xsl:attribute name="alt">
+					<xsl:value-of select="Title" />
+				</xsl:attribute>
+				<xsl:attribute name="src">
+					<xsl:value-of select="ImageUrl" />
+				</xsl:attribute>
 				</img>
 			</div>
 		</div>
@@ -79,4 +83,3 @@
 
 
 </xsl:stylesheet>
-  

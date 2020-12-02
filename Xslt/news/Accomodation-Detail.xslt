@@ -62,8 +62,11 @@
 			<div class="chart-wrapper">
 				<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
 			</div>
-			<div class="btn-center"><a class="btn btn-primary" href="javascript:;"><em
-						class="mdi mdi-pencil"></em><span>Book
+			<div class="btn-center"><a class="btn btn-primary">
+			<xsl:attribute name="href">
+				<xsl:text>https://lalya.reserve-online.net/?checkin=&amp;checkout=&amp;adults=1</xsl:text>
+			</xsl:attribute>
+				<em class="mdi mdi-pencil"></em><span>Book
 						now</span></a></div>
 			<div class="swiper-top-wrap">
 				<div class="hidden lg:block">
