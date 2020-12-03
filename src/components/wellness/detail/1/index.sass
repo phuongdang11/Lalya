@@ -92,7 +92,21 @@
 			@apply pt-4
 			
 	.caption
+		height: 300px
+		overflow-y: auto
+		padding-right: 50px
+		&:firt-child
+			height: auto
 		strong
 			@apply font-bold uppercase text-main
 		*
 			@apply mb-4
+		@media screen and ( max-width: 1024.1px )
+			margin-bottom: 50px
+			height: 200px
+		@media screen and ( max-width: 576px )
+			height: 100px
+			padding-right: 20px
+	.fix-css
+		height: auto
+		padding-bottom: 50px

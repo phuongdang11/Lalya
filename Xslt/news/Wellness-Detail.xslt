@@ -11,7 +11,7 @@
 						<xsl:value-of select="ZoneTitle" disable-output-escaping="yes" />
 					</h1>
 				</div>
-				<div class="caption text-center">
+				<div class="caption text-center fix-css">
 					<xsl:value-of select="ZoneDescription" disable-output-escaping="yes" />
 				</div>
 				<xsl:if test="ImageUrl != ''">
